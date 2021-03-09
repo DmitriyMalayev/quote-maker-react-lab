@@ -33,7 +33,7 @@ class Quotes extends Component {
 
 const mapStateToProps = ({ quotes }) => {
   return {
-    quotes: state.quotes,
+    quotes: quotes,
   };
 };
 

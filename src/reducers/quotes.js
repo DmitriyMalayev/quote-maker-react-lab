@@ -11,7 +11,7 @@ export default (state = [], action) => {
       return [...state, action.quote];
     // return state.concat(action.quote)  ES5 alternative
     case REMOVE_QUOTE:
-      return state.filter((quote) => quote.id !== quoteId);
+      return state.filter((quote) => quote.id !== action.quoteId);
     //If you call id on an array you will get undefined
     //We call action.quoteId to access what's passed in ??
     case UPVOTE_QUOTE:

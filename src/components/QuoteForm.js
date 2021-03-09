@@ -15,6 +15,7 @@ class QuoteForm extends Component {
     this.setState({
       [event.target.name]: event.target.value,
     });
+
     /* 
     Handle Updating Component State
     If we know the property names of state (content and author) and they match the key and state that we want to update then what we do do is use that fact in setState. We don't know which property and state we are going to update when this event happensbecause we are attaching the event handler to multiple inputs. We are adding multiple on change event listeners and using the same handler. This is why we need to use a computed property. 
@@ -74,7 +75,7 @@ class QuoteForm extends Component {
                         type="text"
                         name="author"
                         value={this.state.author}
-                        onchange={this.handleOnChange}
+                        onChange={this.handleOnChange}
                       />
                     </div>
                   </div>
@@ -99,6 +100,8 @@ const mapDispatchToProps = (dispatch) => {
     addQuote: (quote) => dispatch(addQuote(quote)), //WHY NO CURLY BRACKETS
   };
 };
+
+export default connect(null, mapDispatchToProps)(QuoteForm);
 /*
 mapDispatchToProps
 returns an object that will be props for the component 

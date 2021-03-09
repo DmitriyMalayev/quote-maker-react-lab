@@ -19,13 +19,25 @@ const QuoteCard = ({ quote, removeQuote, upvoteQuote, downvoteQuote }) => (
           role="group"
           aria-label="Basic example"
         >
-          <button type="button" className="btn btn-primary" onClick={() => upvoteQuote(quote.id)}>       
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={() => upvoteQuote(quote.id)}
+          >
             Upvote
           </button>
-          <button type="button" className="btn btn-secondary" onClick={() => downvoteQuote(quote.id)}>
+          <button
+            type="button"
+            className="btn btn-secondary"
+            onClick={() => downvoteQuote(quote.id)}
+          >
             Downvote
           </button>
-          <button type="button" className="btn btn-danger" onClick={() => removeQuote(quote.id)}>
+          <button
+            type="button"
+            className="btn btn-danger"
+            onClick={() => removeQuote(quote.id)}
+          >
             <span aria-hidden="true">&times;</span>
           </button>
           <div>Votes: {quote.votes}</div>
@@ -34,9 +46,7 @@ const QuoteCard = ({ quote, removeQuote, upvoteQuote, downvoteQuote }) => (
     </div>
   </div>
 );
-
 export default QuoteCard;
 
-
-// If you pass a function as an event handler what is it going to be called with as an argument ? 
-//Why quote.id instead of QuoteId?? 
+// If you pass a function as an event handler what is it going to be called with as an argument ?
+//Why quote.id instead of QuoteId??
