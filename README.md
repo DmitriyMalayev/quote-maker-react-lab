@@ -18,7 +18,7 @@ will also need a reducer and actions file for our Quotes.
 The quotes reducer should have an initial state of:
 
 ```javascript
-[]
+[];
 ```
 
 But when a Quote is added it should look like this
@@ -27,30 +27,28 @@ But when a Quote is added it should look like this
 ```javascript
 [
   {
-    id: '23423424242-42342423424242-fafdb',
-    content: 'One Awesome Quote',
-    author: 'Luke Ghenco'
-  }
-]
+    id: "23423424242-42342423424242-fafdb",
+    content: "One Awesome Quote",
+    author: "Luke Ghenco",
+  },
+];
 ```
 
 We will also need to extend out the Quotes Reducer to handle removing quotes,
-upvoting quotes, and downvoting quotes as well. Check out the test specs for how
-to build these.
+upvoting quotes, and downvoting quotes as well. Check out the test specs for how to build these.
 
 ### Quotes Actions
 
 Build out several actions as specified in the tests that build Action Creators
-for add, removing, upvoting and downvoting quotes.
+for adding, removing, upvoting and downvoting quotes.
 
 ### QuoteForm Component
 
 Our Quote form will have a textarea for a quotes content and an input for a
 quotes author. We will be using component state for updating the inputs so make
-sure to have a state of `{ content: '', author: '' }` in your `QuoteForm`
-constructor. You will make a dispatch action to Redux using an action you will
-create called `addQuote()` that will take a quote as an argument and start the
-reducer process.
+sure to have a state of `{ content: '', author: '' }` in your `QuoteForm` constructor.
+You will make a dispatch action to Redux using an action creator you will
+create called `addQuote()` that will take a quote as an argument and start the reducer process.
 
 ### Quotes Component
 
@@ -61,8 +59,7 @@ Quotes Actions file to pass down as callback props to the `QuoteCard` component.
 
 ### QuoteCard Component
 
-Make sure to connect the callback action props to the the Upvote, Downvote and
-Delete buttons.
+Make sure to connect the callback action props to the the Upvote, Downvote and Delete buttons.
 
 #### Example App
 
@@ -77,9 +74,8 @@ is the documentation for [Node UUID](https://github.com/kelektiv/node-uuid). To
 use it just import it into your reducer and invoke it
 
 ```javascript
-import uuid from 'uuid';
+import uuid from "uuid";
 
 const id = uuid();
-console.log(id) // '1fd3234'
+console.log(id); // '1fd3234'
 ```
-
